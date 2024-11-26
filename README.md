@@ -5,4 +5,3 @@ Requirements:
 
 ### Showcase  
 
-![[Screenshot_20241126_105526.jpg]]  ![[Screenshot_20241126_105534.jpg]]
