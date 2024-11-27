@@ -11,3 +11,4 @@ vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
 vim.opt.mouse = ""
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "<leader>fF", "<cmd>Telescope frecency<cr>", { desc = "telescope frecency" })
+vim.keymap.set("n", "<leader>uT", "<cmd>UndotreeToggle<cr>", { desc = "undotree toggle" })
