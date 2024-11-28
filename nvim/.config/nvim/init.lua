@@ -21,7 +21,7 @@ local splash = {
   "Hello, World",
   "Welcome to Neovim",
   "Folke is the GOAT",
-  "Lazyvim for the lazy"
+  "Lazyvim for the lazy",
 }
 
 math.randomseed()
