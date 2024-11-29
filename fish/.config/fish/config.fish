@@ -1,3 +1,4 @@
+set -U fish_user_paths ~/.local/bin/
 clear
 fastfetch
 alias l="eza -l --icons --git -a"
