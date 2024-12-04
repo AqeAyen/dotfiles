@@ -57,7 +57,7 @@ return {
 
   keys = {
     {
-      "<leader>e",
+      "<leader>m",
       function()
         require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
       end,

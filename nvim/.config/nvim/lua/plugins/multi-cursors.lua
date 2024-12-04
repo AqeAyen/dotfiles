@@ -11,7 +11,7 @@ return {
     keys = {
       {
         mode = { 'v', 'n' },
-        '<Leader>m',
+        '<Leader>mC',
         '<cmd>MCstart<cr>',
         desc = 'Create a selection for selected text or word under the cursor',
       },
