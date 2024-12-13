@@ -7,7 +7,7 @@ return {
   config = function()
     local dap = require('dap')
     vim.keymap.set('n', '<Leader>B', function() dap.set_breakpoint() end)
-    vim.keymap.set('n', '<Leader>lp',
+    vim.keymap.set('n', '<Leader>Lp',
       function() dap.set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
     vim.keymap.set('n', '<Leader>tB', function() dap.toggle_breakpoint() end)
     vim.keymap.set('n', '<F5>', function() dap.continue() end)
