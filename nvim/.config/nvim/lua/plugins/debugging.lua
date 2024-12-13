@@ -25,11 +25,31 @@ return {
     dap.listeners.before.event_exited.dapui_config = function()
       dapui.close()
     end
+    -- dap.adapters.cppdbg = {
+    --   name = 'cppdbg',
+    --   type = 'executable',
+    --   command = vim.fn.stdpath('data') .. '/mason/bin/OpenDebugAD7',
+    -- }
+    -- dap.configurations.cpp = {
+    --   {
+    --     name = "Launch",
+    --     type = "cppdbg",
+    --     request = "launch",
+    --     program = function()
+    --       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    --     end,
+    --     cwd = '${workspaceFolder}',
+    --     stopOnEntry = false,
+    --     args = {},
+    --     runInTerminal = true,
+    --   },
+    -- }
+    -- dap.configurations.h = dap.configurations.cpp
 
     dap.adapters.gdb = {
       type = "executable",
       command = "gdb",
-      args = { "--interpreter=dap", "--eval-command", "set print pretty on" }
+      args = { "-i", "dap" }
     }
 
     dap.configurations.cpp = {
@@ -42,6 +62,8 @@ return {
         end,
         cwd = "${workspaceFolder}",
         stopAtBeginningOfMainSubprogram = false,
+
+        -- runInTerminal = true
       },
       {
         name = "Select and attach to process",
