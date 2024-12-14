@@ -10,8 +10,8 @@ require 'lspconfig'.clangd.setup {
     float = true,
   }),
 }
-
 require('mini.animate').setup()
+Snacks.indent.disable()
 require("toggleterm").setup {}
 -- require("lsp_lines").setup {}
 require("oil").setup()
