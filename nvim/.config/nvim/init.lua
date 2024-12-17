@@ -11,7 +11,6 @@ require 'lspconfig'.clangd.setup {
   }),
 }
 require('mini.animate').setup()
-require("toggleterm").setup {}
 -- require("lsp_lines").setup {}
 require("oil").setup()
 require 'lspconfig'.cmake.setup {}
