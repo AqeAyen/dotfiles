@@ -15,16 +15,16 @@ require('mini.animate').setup()
 require("oil").setup()
 require 'lspconfig'.cmake.setup {}
 vim.api.clipboard = "unnamedplus"
-require 'lspconfig'.rust_analyzer.setup {}
-local splash = {
-  "Hello, World",
-  "Welcome to Neovim",
-  "Folke is the GOAT",
-  "Lazyvim for the lazy",
-}
+-- require 'lspconfig'.rust_analyzer.setup {}
+-- local splash = {
+--   "Hello, World",
+--   "Welcome to Neovim",
+--   "Folke is the GOAT",
+--   "Lazyvim for the lazy",
+-- }
 
-math.randomseed()
-require("notify")(splash[math.random(1, #splash)])
+-- math.randomseed()
+-- require("notify")(splash[math.random(1, #splash)])
 require("provider.clipboard.health").check()
 require("catppuccin").setup {
   color_overrides = {
