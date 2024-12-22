@@ -1,0 +1,25 @@
+.git/
+
+
+fish/.config/fish/fish_variables
+nvim/.config/nvim/lazy-lock.json
+# Ignore Fish shell compiled and temporary files
+*.fishdump
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignore Fish history
+~/.local/share/fish/fish_history
+
+# Ignore fish universal variables
+~/.config/fish/fish_variables
+
+# Ignore system-specific configs
+~/.config/fish/local.fish
+
+# Ignore custom plugins or tools (optional)
+~/.config/omf
+~/.config/fish/fish_plugins
+~/.config/fish/functions/fisher.fish
