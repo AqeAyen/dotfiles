@@ -14,7 +14,7 @@ require('mini.animate').setup()
 -- require("lsp_lines").setup {}
 require("oil").setup()
 require 'lspconfig'.cmake.setup {}
-vim.api.clipboard = "unnamedplus"
+-- vim.api.clipboard = "unnamedplus"
 -- require 'lspconfig'.rust_analyzer.setup {}
 -- local splash = {
 --   "Hello, World",
@@ -86,3 +86,13 @@ require("catppuccin").setup {
 --   }
 -- }
 -- vim.lsp.enable("clangd")
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "cpp",
+  group = vim.api.nvim_create_augroup("PragmaRegionFolding", { clear = true }),
+  callback = function()
+    vim.cmd([[
+            syntax region PragmaRegion start="^\s*#pragma\sregion" end="^\s*#pragma\sendregion" fold
+        ]])
+  end,
+})
