@@ -1,6 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-require 'lspconfig'.clangd.setup {
+require("lspconfig").clangd.setup({
   vim.diagnostic.config({
     virtual_text = true,
     signs = true,
@@ -9,24 +9,13 @@ require 'lspconfig'.clangd.setup {
     severity_sort = true,
     float = true,
   }),
-}
-require('mini.animate').setup()
+})
+require("mini.animate").setup()
 -- require("lsp_lines").setup {}
 require("oil").setup()
-require 'lspconfig'.cmake.setup {}
--- vim.api.clipboard = "unnamedplus"
--- require 'lspconfig'.rust_analyzer.setup {}
--- local splash = {
---   "Hello, World",
---   "Welcome to Neovim",
---   "Folke is the GOAT",
---   "Lazyvim for the lazy",
--- }
-
--- math.randomseed()
--- require("notify")(splash[math.random(1, #splash)])
+require("lspconfig").cmake.setup({})
 require("provider.clipboard.health").check()
-require("catppuccin").setup {
+require("catppuccin").setup({
   color_overrides = {
     all = {
       rosewater = "#f5e0dc",
@@ -57,7 +46,7 @@ require("catppuccin").setup {
       crust = "#11111b",
     },
   },
-}
+})
 -- vim.lsp.config.clangd {
 --   cmd = {
 --     "clangd",
