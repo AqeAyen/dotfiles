@@ -11,10 +11,8 @@ require("lspconfig").clangd.setup({
   }),
 })
 require("mini.animate").setup()
--- require("lsp_lines").setup {}
 require("oil").setup()
 require("lspconfig").cmake.setup({})
-require("provider.clipboard.health").check()
 require("catppuccin").setup({
   color_overrides = {
     all = {
@@ -75,13 +73,3 @@ require("catppuccin").setup({
 --   }
 -- }
 -- vim.lsp.enable("clangd")
-
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "cpp",
-  group = vim.api.nvim_create_augroup("PragmaRegionFolding", { clear = true }),
-  callback = function()
-    vim.cmd([[
-            syntax region PragmaRegion start="^\s*#pragma\sregion" end="^\s*#pragma\sendregion" fold
-        ]])
-  end,
-})
