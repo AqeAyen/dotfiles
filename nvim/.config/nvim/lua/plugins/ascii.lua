@@ -1,9 +1,9 @@
 return {
   {
     "https://github.com/MaximilianLloyd/ascii.nvim.git",
-    lazy = false,
+    lazy = true,
     dependencies = {
-      "https://github.com/MunifTanjim/nui.nvim.git"
-    }
-  }
+      "https://github.com/MunifTanjim/nui.nvim.git",
+    },
+  },
 }
